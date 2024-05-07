@@ -1,0 +1,28 @@
+{
+  "name": "learn_react",
+  "version": "1.0.0",
+  "description": "Learning React from Scratch",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Pushparaj-K-1438/Learning_React_.git)"
+  },
+  "keywords": [],
+  "author": "Pushparaj",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList":[
+    "last 2 version"
+  ]
+
+}

@@ -1,0 +1,31 @@
+Bundler:
+    minified-cached-compressed
+    packages or bundles our app so that is is shipped to production properly
+        Bundlers:
+            1. Parcel,
+            2. Viite etc..
+
+Dependencies:
+    Two typpes of dependencies we can install 
+    1. Dev dependencies 
+    2. other is normal dependencies 
+
+        Eg : npm install -D parcel --  where "-D" we are telling npm to install the dev dependencies not the normal dependency 
+
+
+Package.json 
+    It is a configuration for npm which keeps a track of what packages have been installed in our system
+    It is keeps an approx version od the packages
+    ^ in version is denoting the minor upgrade and if any minor upgrade is there it automatically upgrades eg: 3.2.2 to 3.2.3
+    ~ in version is denoting the major upgrade and if any major upgrade is there it automatically upgrades eg: 3.2.2 to 4.0.0
+    Safer to use ^ in version
+
+Package-lock.json 
+    it keeps a record of exact version of the package/dependency which is installed
+    where as it keeps the exact version of the package
+
+npm -- if we need to install the package then we use npm
+npx -- is used for executing a package syntax is - npx packageName
+
+
+Parcel:
