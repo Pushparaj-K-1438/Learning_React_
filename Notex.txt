@@ -27,5 +27,8 @@ Package-lock.json
 npm -- if we need to install the package then we use npm
 npx -- is used for executing a package syntax is - npx packageName
 
-
-Parcel:
+React Components:
+    Class Componednts - 
+    Functional Componednts : 
+        just a normal javascript function - Naming must start with Caps
+        A function which is returning a jsx is a functional component
