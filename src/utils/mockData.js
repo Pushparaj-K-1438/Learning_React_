@@ -1,4 +1,4 @@
-export const foodItems = [
+const foodItems = [
     {
         "info":{
                 "id": "436096",
@@ -700,3 +700,6 @@ export const foodItems = [
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
 ]
+
+
+export default foodItems;
