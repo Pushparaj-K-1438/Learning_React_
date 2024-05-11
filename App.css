@@ -1,0 +1,36 @@
+.header_wrap{
+    display:flex;
+    justify-content: space-between;
+}
+.logoImg{
+    width: 140px;;
+}
+.nav_list{
+    display: flex;
+    align-items: center;
+}
+.nav_item{
+    list-style: none;
+    padding: 10px;
+}
+.care_wrap{
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    width: 300px;
+    padding: 12px;
+    background: #ece1de;
+}
+.food_img{
+    width: -webkit-fill-available;
+    border-radius: 2px;
+    max-height: 160px;
+    object-fit: cover;
+}
+.body_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.txt_captilize{
+    text-transform: capitalize;
+}
