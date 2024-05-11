@@ -32,3 +32,11 @@ React Components:
     Functional Componednts : 
         just a normal javascript function - Naming must start with Caps
         A function which is returning a jsx is a functional component
+
+Types of Export
+    export default and
+    Named export - which we use it before the compoent name
+
+Types of Import 
+    default exported component we import it as import nameOfComponent from '';
+    named export component we import it as import {nameOfComponent} from '';

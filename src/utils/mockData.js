@@ -1,18 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import logo from "./public/ramen_logo.png"
-const Header = () => (
-    <div className="header_wrap">
-        <img src={logo} className="logoImg" />
-        <ul className="nav_list">
-            <li className="nav_item">Home</li>
-            <li className="nav_item">About</li>
-            <li className="nav_item">Cart</li>
-        </ul>
-    </div>
-)
-
-const foodItems = [
+export const foodItems = [
     {
         "info":{
                 "id": "436096",
@@ -714,36 +700,3 @@ const foodItems = [
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
 ]
-
-
-const FoodBlock = (props) => {
-    const {foodItems} = props;
-    const {cloudinaryImageId, name, cuisines, costForTwo} = foodItems?.info;
-    return(
-        <div className="care_wrap">
-        <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} className="food_img" />
-        <div className="details_wrap">
-            <h3>{name}</h3>
-            <p>{cuisines.join(", ")}</p>
-            <p className="txt_captilize">{costForTwo}</p>
-        </div>
-    </div>
-    );
-}
-const Body = () => (
-    <div className="body_wrap">
-        {
-            foodItems.map((itamsList) => (<FoodBlock key={itamsList.info.id} foodItems={itamsList} />))
-        }
-    </div>
-)
-
-const MainWrap = () => (
-    <div className="main_wrap">
-        <Header />
-        <Body />
-    </div>
-)
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<MainWrap />);
