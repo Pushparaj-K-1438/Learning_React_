@@ -14,15 +14,15 @@
     padding: 10px;
 }
 .care_wrap{
-    border: 1px solid #e6e6e6;
-    border-radius: 6px;
+    /* border: 1px solid #e6e6e6;
+    border-radius: 6px; */
     width: 300px;
     padding: 12px;
-    background: #ece1de;
+    /* background: #ece1de; */
 }
 .food_img{
     width: -webkit-fill-available;
-    border-radius: 2px;
+    border-radius: 14px;
     max-height: 160px;
     object-fit: cover;
 }
@@ -33,4 +33,19 @@
 }
 .txt_captilize{
     text-transform: capitalize;
+}
+.details_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.details_wrap h3,p{
+    margin: 0px;
+}
+.filter_div{
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #e6e6e6 !important;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
 }
