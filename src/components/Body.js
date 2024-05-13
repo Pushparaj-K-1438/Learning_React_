@@ -1,5 +1,7 @@
 import { FoodBlock } from "./FoodBlock";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const Body = () => {
   const [listOfFilteredData, setListOfFilteredData] = useState([]);
@@ -39,7 +41,9 @@ const Body = () => {
       </div>
       <div className="body_wrap">
         {filteredSearchData.map((resturant) => (
-          <FoodBlock key={resturant.info.id} resData={resturant} />
+          <Link key={resturant.info.id} to={"/resturant/"+resturant.info.id}>
+            <FoodBlock resData={resturant} />
+          </Link>
         ))}
       </div>
     </div>

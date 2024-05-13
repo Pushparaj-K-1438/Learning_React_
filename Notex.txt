@@ -40,3 +40,8 @@ Types of Export
 Types of Import 
     default exported component we import it as import nameOfComponent from '';
     named export component we import it as import {nameOfComponent} from '';
+
+useEffect
+    if no dependency array then useEffect is called on every render
+    if dependency array is empty [] them useEffect is called only on initial render(only once)
+    if there is any dependency like [skdhf] then useEffect is called everytime this skdhf is updated 

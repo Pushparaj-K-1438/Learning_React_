@@ -26,3 +26,24 @@
 
 # Browser Support
 - we can configure which all browsers our app supports so er need to add the code in package.json as browsersList:[]
+
+# createBrowserRouter
+- is used to create routed for out applications
+-  eg: 
+-   const router = createBrowserRouter([
+-     {
+-       path: "/",
+-       element: <MainWrap />,
+-       errorElement:<Error />
+-     },
+-   ])
+
+
+# RouterProvider
+- is used to render data
+- <RouterProvider router={router} />
+
+
+# Outlet
+- is used to render the componect keeping the common element and render the routed emelent
+- <Outlet />

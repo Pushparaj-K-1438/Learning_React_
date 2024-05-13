@@ -1,6 +1,8 @@
 .header_wrap{
     display:flex;
     justify-content: space-between;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e6e6e6;
 }
 .logoImg{
     width: 140px;;
