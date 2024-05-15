@@ -45,3 +45,20 @@ useEffect
     if no dependency array then useEffect is called on every render
     if dependency array is empty [] them useEffect is called only on initial render(only once)
     if there is any dependency like [skdhf] then useEffect is called everytime this skdhf is updated 
+
+Mounting 
+    renderPhase
+        constructor
+        render
+    Commit Phase
+        render Dom
+        componentDidMount
+Updating
+    renderPhase
+        New props  -  setState()  -  forceUpdate
+        render
+    commit Phase
+        update Dom
+        componentDidUpdate
+Unmounting
+    componentWillUnmount
