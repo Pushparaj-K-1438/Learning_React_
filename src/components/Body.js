@@ -1,12 +1,12 @@
 import { FoodBlock } from "./FoodBlock";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useFetchResturantsList from "../utils/useFetchResturantsList";
 
 
 const Body = () => {
   const [searchInput, setSearchInput] = useState("");
-  const {listOfFilteredData, filteredSearchData, searchResturants, filterBasedOnRating} = useFetchResturantsList();
+  const {filteredSearchData, searchResturants, filterBasedOnRating} = useFetchResturantsList();
 
   return (
     <div>

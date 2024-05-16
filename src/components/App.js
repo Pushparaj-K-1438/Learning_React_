@@ -1,12 +1,16 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Body from "./Body";
 import Contact from "./Contact";
-import Resturant from "./Resturant";
 import Error from "./Error";
-import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./About";
+
+// Lazy loading
+//chunking
+//Code spliting
+//ondemandloading
 
 const MainWrap = () => {
     return (
@@ -16,6 +20,7 @@ const MainWrap = () => {
         </div>
     );
 };
+const Resturant = lazy(() => import("./Resturant"));
 
 const router = createBrowserRouter([
     {
@@ -35,12 +40,12 @@ const router = createBrowserRouter([
                 element: <Contact />
             },
             {
-                path:"/resturant/:resId",
-                element: <Resturant />
+                path: "/resturant/:resId",
+                element: <Suspense fallback={<h2>Loading...</h2>}><Resturant /></Suspense>
             }
         ],
-        errorElement:<Error />
-    }    
+        errorElement: <Error />
+    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
