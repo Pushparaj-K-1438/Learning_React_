@@ -14,7 +14,7 @@ import About from "./About";
 
 const MainWrap = () => {
     return (
-        <div className="main_wrap">
+        <div className="flex flex-col">
             <Header />
             <Outlet />
         </div>

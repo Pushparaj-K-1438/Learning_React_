@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => (
-    <div className="header_wrap">
-        <img src={logo} className="logoImg" />
-        <ul className="nav_list">
+    <div className="flex flex-row justify-between items-center border-b">
+        <img src={logo} className="h-28" />
+        <ul className="flex gap-3 mr-32">
             <li className="nav_item">
                 <Link to='/'>Home</Link>
             </li>
