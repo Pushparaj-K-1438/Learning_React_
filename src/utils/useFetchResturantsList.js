@@ -10,7 +10,6 @@ const useFetchResturantsList = () => {
     const resturantList = async () =>{
         const fetchedList = await fetch(RESTURANT_LIST);
         const fetchedJson = await fetchedList.json();
-        console.log(fetchedJson);
         const  resturantsListData = fetchedJson?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setListOfFilteredData(resturantsListData);
         setFilteredSearchData(resturantsListData);
@@ -21,7 +20,6 @@ const useFetchResturantsList = () => {
             (filteredSearch) => filteredSearch.info.name.toLowerCase().includes(searchInput.toLowerCase())
         );
         setFilteredSearchData(filteredData);
-        console.log(filteredData);
     }
 
     const filterBasedOnRating = () =>{
