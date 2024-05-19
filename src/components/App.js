@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Body from "./Body";
@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Error from "./Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./About";
+import UserContext from "../utils/UserContext";
 
 // Lazy loading
 //chunking
@@ -13,11 +14,21 @@ import About from "./About";
 //ondemandloading
 
 const MainWrap = () => {
+    const [userInfo, setUserInfo] = useState();
+
+    useEffect(() => {
+        const userName = {
+            name: "pushparaj K"
+        }
+        setUserInfo(userName.name);
+    }, [])
     return (
-        <div className="flex flex-col">
-            <Header />
-            <Outlet />
-        </div>
+        <UserContext.Provider value={{name: userInfo}}>
+            <div className="flex flex-col">
+                <Header />
+                <Outlet />
+            </div>
+        </UserContext.Provider>
     );
 };
 const Resturant = lazy(() => import("./Resturant"));
