@@ -47,3 +47,11 @@
 # Outlet
 - is used to render the componect keeping the common element and render the routed emelent
 - <Outlet />
+
+# Redux Toolkit
+- Install @redux/toolkit and react-redux
+- Build Storre
+- Connect Store
+- slice (cart slice)
+- dispatch (action)
+- selector

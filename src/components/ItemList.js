@@ -1,6 +1,12 @@
+import { useDispatch } from "react-redux"
 import { SWIGGY_IMG, STAR_IMG } from "../utils/constants"
+import { addItem }  from "../utils/cartSlice";
 const ItemList = ({ items }) => {
-    console.log(items);
+    const dispatch = useDispatch();
+    const addItemToCart = (item) => {
+        // Dispatch an action
+        dispatch(addItem(item));
+    }
     return (
         <div className="flex flex-col gap-3 px-6 pb-5">
             {
@@ -28,8 +34,9 @@ const ItemList = ({ items }) => {
                                 {item?.card?.info?.description}
                             </p>
                         </div>
-                        <div className="flex w-2/12">
+                        <div className="flex w-2/12 relative">
                             <img className="rounded-lg h-32 object-cover w-full" src={SWIGGY_IMG + item?.card?.info?.imageId} />
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute flex bottom-2 left-1/4" onClick={() => addItemToCart(item)}> + Add</button>
                         </div>
                     </div>
                 ))

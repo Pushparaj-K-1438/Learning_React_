@@ -7,6 +7,9 @@ import Error from "./Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./About";
 import UserContext from "../utils/UserContext";
+import appStore from "../utils/appStore";
+import { Provider } from "react-redux";
+import Cart from "./Cart";
 
 // Lazy loading
 //chunking
@@ -23,12 +26,14 @@ const MainWrap = () => {
         setUserInfo(userName.name);
     }, [])
     return (
-        <UserContext.Provider value={{name: userInfo}}>
-            <div className="flex flex-col">
-                <Header />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ name: userInfo }}>
+                <div className="flex flex-col">
+                    <Header />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     );
 };
 const Resturant = lazy(() => import("./Resturant"));
@@ -53,6 +58,10 @@ const router = createBrowserRouter([
             {
                 path: "/resturant/:resId",
                 element: <Suspense fallback={<h2>Loading...</h2>}><Resturant /></Suspense>
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             }
         ],
         errorElement: <Error />
