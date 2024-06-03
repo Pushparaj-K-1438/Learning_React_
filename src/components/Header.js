@@ -9,7 +9,7 @@ const Header = () => {
     const {name} = useContext(UserContext);
     // subscribing to the store using a selector
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
     return (
         <div className="flex flex-row justify-between items-center border-b">
             <img src={logo} className="h-28" />
